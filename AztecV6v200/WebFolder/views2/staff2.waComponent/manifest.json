@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "staff2",    
+    "html"    : "staff2.html",
+    "styles"  : ["staff2.css"],
+    "scripts" : ["staff2.js"]
+}
