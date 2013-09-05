@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "Progress",    
+    "html"    : "Progress.html",
+    "styles"  : ["Progress.css"],
+    "scripts" : ["Progress.js"]
+}

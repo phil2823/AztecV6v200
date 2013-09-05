@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "Home",    
+    "html"    : "Home.html",
+    "styles"  : ["Home.css"],
+    "scripts" : ["Home.js"]
+}

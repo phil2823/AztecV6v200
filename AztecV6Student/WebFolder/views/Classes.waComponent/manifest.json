@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "Classes",    
+    "html"    : "Classes.html",
+    "styles"  : ["Classes.css"],
+    "scripts" : ["Classes.js"]
+}
