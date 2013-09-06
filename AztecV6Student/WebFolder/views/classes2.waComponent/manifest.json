@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "classes2",    
-    "html"    : "classes2.html",
-    "styles"  : ["classes2.css"],
-    "scripts" : ["classes2.js"]
-}
+﻿{"name":"classes2","html":"classes2.html","scripts":["classes2.js"],"styles":["classes2.css"]}

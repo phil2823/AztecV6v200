@@ -2,21 +2,25 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
-	var menuItem2 = {};	// @menuItem
+	var menuClasses = {};	// @menuItem
+	var documentEvent = {};	// @document
 // @endregion// @endlock
 
 // eventHandlers// @lock
 
-	menuItem2.click = function menuItem2_click (event)// @startlock
+	menuClasses.click = function menuClasses_click (event)// @startlock
 	{// @endlock
-		// Add your code here
-		// load up classes component
-		
-		$$('studentMain').loadComponent('/views/classes.waComponent');
-		
+		$$('studentMain').loadComponent('/views/classes2.waComponent');
 	};// @lock
 
+	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
+	{// @endlock
+	
+	};// @lock
+		
+
 // @region eventManager// @startlock
-	WAF.addListener("menuItem2", "click", menuItem2.click, "WAF");
+	WAF.addListener("menuClasses", "click", menuClasses.click, "WAF");
+	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
 };// @endlock
