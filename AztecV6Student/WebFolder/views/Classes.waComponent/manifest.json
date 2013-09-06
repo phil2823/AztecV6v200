@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "Classes",    
-    "html"    : "Classes.html",
-    "styles"  : ["Classes.css"],
-    "scripts" : ["Classes.js"]
-}
+﻿{"name":"Classes","html":"Classes.html","scripts":["Classes.js"],"styles":["Classes.css"]}

@@ -19,7 +19,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	menuStudents.click = function menuStudents_click (event)// @startlock
 	{// @endlock
 		// Student Menu
-		alert('student menu');
 		$$('main').loadComponent('/views/students.waComponent');
 	
 	};// @lock
