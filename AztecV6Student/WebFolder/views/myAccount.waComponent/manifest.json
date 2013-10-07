@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "myAccount",    
-    "html"    : "myAccount.html",
-    "styles"  : ["myAccount.css"],
-    "scripts" : ["myAccount.js"]
-}
+﻿{"name":"myAccount","html":"myAccount.html","scripts":["myAccount.js"],"styles":["myAccount.css"]}

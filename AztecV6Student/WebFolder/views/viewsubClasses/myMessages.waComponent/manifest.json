@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "myMessages",    
+    "html"    : "myMessages.html",
+    "styles"  : ["myMessages.css"],
+    "scripts" : ["myMessages.js"]
+}

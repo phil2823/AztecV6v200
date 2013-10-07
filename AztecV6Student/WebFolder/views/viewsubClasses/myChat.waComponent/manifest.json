@@ -1,0 +1,6 @@
+﻿{
+    "name"    : "myChat",    
+    "html"    : "myChat.html",
+    "styles"  : ["myChat.css"],
+    "scripts" : ["myChat.js"]
+}
