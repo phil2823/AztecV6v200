@@ -28,6 +28,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		//This is click on my Settings at top
 		cleanMenuButtons();
+		$$('breadText').setValue('Your Account Settings');
 		$$('studentMain').loadComponent('views/myAccount.waComponeent');
 	};// @lock
 
