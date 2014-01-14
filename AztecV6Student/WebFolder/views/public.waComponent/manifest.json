@@ -1,6 +1,1 @@
-﻿{
-    "name"    : "public",    
-    "html"    : "public.html",
-    "styles"  : ["public.css"],
-    "scripts" : ["public.js"]
-}
+﻿{"name":"public","html":"public.html","scripts":["public.js"],"styles":["public.css"]}
