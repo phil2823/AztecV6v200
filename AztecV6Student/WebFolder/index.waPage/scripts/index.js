@@ -2,6 +2,7 @@
 WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
+	var StudentCopyRight = {};	// @richText
 	var breadText1 = {};	// @richText
 	var breadText = {};	// @richText
 	var richText4 = {};	// @richText
@@ -13,6 +14,11 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 // @endregion// @endlock
 
 // eventHandlers// @lock
+
+	StudentCopyRight.click = function StudentCopyRight_click (event)// @startlock
+	{// @endlock
+		alert('Credits: Aztec Software. Sal, Phil, JB and MK. Free icon set from www.aha-soft.com and ');
+	};// @lock
 
 	breadText1.click = function breadText1_click (event)// @startlock
 	{// @endlock
@@ -28,8 +34,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	{// @endlock
 		//This is click on my Settings at top
 		cleanMenuButtons();
+		//alert('wow'); was for debugging found error in load component
 		$$('breadText').setValue('Your Account Settings');
-		$$('studentMain').loadComponent('views/myAccount.waComponeent');
+		$$('studentMain').loadComponent('/views/myAccount.waComponent');
 	};// @lock
 
 	login1.logout = function login1_logout (event)// @startlock
@@ -41,7 +48,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	login1.login = function login1_login (event)// @startlock
 	{// @endlock
 		$$('studentMain').loadComponent('/views/classes2.waComponent');
-		$$('menuClasses').setTextColor("blue");
+		
 	};// @lock
 
 	menuStudent.click = function menuStudent_click (event)// @startlock
@@ -107,6 +114,7 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	
 	
 // @region eventManager// @startlock
+	WAF.addListener("StudentCopyRight", "click", StudentCopyRight.click, "WAF");
 	WAF.addListener("breadText1", "click", breadText1.click, "WAF");
 	WAF.addListener("breadText", "click", breadText.click, "WAF");
 	WAF.addListener("richText4", "click", richText4.click, "WAF");
