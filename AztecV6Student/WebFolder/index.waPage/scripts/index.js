@@ -3,13 +3,10 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 // @region namespaceDeclaration// @startlock
 	var StudentCopyRight = {};	// @richText
-	var breadText1 = {};	// @richText
 	var breadText = {};	// @richText
 	var richText4 = {};	// @richText
 	var login1 = {};	// @login
-	var menuStudent = {};	// @menuItem
 	var menuSchool = {};	// @menuItem
-	var menuClasses = {};	// @menuItem
 	var documentEvent = {};	// @document
 // @endregion// @endlock
 
@@ -20,11 +17,6 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		alert('Credits: Aztec Software. Sal, Phil, JB and MK. Free icon set from www.aha-soft.com and ');
 	};// @lock
 
-	breadText1.click = function breadText1_click (event)// @startlock
-	{// @endlock
-		alert('akin to first one: or use breadcrumbs in this space');
-	};// @lock
-
 	breadText.click = function breadText_click (event)// @startlock
 	{// @endlock
 		alert('click here brings you back to classes if down hiearchy');
@@ -33,31 +25,29 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 	richText4.click = function richText4_click (event)// @startlock
 	{// @endlock
 		//This is click on my Settings at top
-		cleanMenuButtons();
+		//cleanMenuButtons();
 		//alert('wow'); was for debugging found error in load component
 		$$('breadText').setValue('Your Account Settings');
-		$$('studentMain').loadComponent('/views/myAccount.waComponent');
+		$$('alertText').setColor('black');
+		$$('alertText').setBackgoundColor('white');
+		$$('alertText').setValue('Information');
+		alert('load settings screen into main panel');
+		$$('studentMain').loadComponent('/views/messages.waComponent');
+		
 	};// @lock
 
 	login1.logout = function login1_logout (event)// @startlock
 	{// @endlock
-		cleanMenuButtons();
+		$$('breadText').setTextColor("black");
+		$$('breadText').setValue('Login at upper right');
+		$$('alertText').setValue(' ');	
 		$$('studentMain').loadComponent('/views/public.waComponent');
+
 	};// @lock
 
 	login1.login = function login1_login (event)// @startlock
 	{// @endlock
 		$$('studentMain').loadComponent('/views/classes2.waComponent');
-		
-	};// @lock
-
-	menuStudent.click = function menuStudent_click (event)// @startlock
-	{// @endlock
-		//
-		cleanMenuButtons();
-		//$$('menuStudent').setBackgroundColor("blue");	doesnt work
-		$$('menuStudent').setTextColor("blue");			// works
-		$$('studentMain').loadComponent('/views/messages.waComponent');
 		
 	};// @lock
 
@@ -72,23 +62,16 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 	};// @lock
 
-	menuClasses.click = function menuClasses_click (event)// @startlock
-	{// @endlock
-		//$$('menuClasses').setBackgroundColor("blue");
-		cleanMenuButtons();
-		$$('menuClasses').setTextColor("blue");			// works
-		$$('studentMain').loadComponent('/views/catalog.waComponent');
-		
-		
-	};// @lock
-
 	documentEvent.onLoad = function documentEvent_onLoad (event)// @startlock
 	{// @endlock
 	var checkLogin = WAF.directory.currentUser();
 	if (checkLogin == null) {
 		//alert('not logged');
 		// WAF.loadComponent({id:'studentMain', path: '/views/public.waComponent'});
-		cleanMenuButtons();	
+		//cleanMenuButtons();
+		$$('breadText').setTextColor("black");
+		$$('breadText').setValue('Login at upper right');
+		$$('alertText').setValue(' ');	
 		$$('studentMain').loadComponent('/views/public.waComponent');
 		//$$('menuClasses').setTextColor("blue");
 		}
@@ -103,26 +86,24 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 		
 	function cleanMenuButtons (){
 		// reset the menu button text back to normal
-		$$('menuStudent').setTextColor("black");			
+		//$$('menuStudent').setTextColor("black");			
 		$$('menuSchool').setTextColor("black");			
-		$$('menuClasses').setTextColor("black");			
+		//$$('menuClasses').setTextColor("black");			
 		$$('breadText').setTextColor("black");
-		$$('breadText1').setTextColor("black");
-		$$('breadText').setValue("Start Learning with the Learning Plan");
-		$$('breadText1').setValue(" ");
+		$$('breadText').setValue("Learning Plan: All your registered Classes.");
+		$$('alertText').setTextColor("black");
+		$$('alertText').setValue("Information");
+		
 	};
 	
 	
 // @region eventManager// @startlock
 	WAF.addListener("StudentCopyRight", "click", StudentCopyRight.click, "WAF");
-	WAF.addListener("breadText1", "click", breadText1.click, "WAF");
 	WAF.addListener("breadText", "click", breadText.click, "WAF");
 	WAF.addListener("richText4", "click", richText4.click, "WAF");
 	WAF.addListener("login1", "logout", login1.logout, "WAF");
 	WAF.addListener("login1", "login", login1.login, "WAF");
-	WAF.addListener("menuStudent", "click", menuStudent.click, "WAF");
 	WAF.addListener("menuSchool", "click", menuSchool.click, "WAF");
-	WAF.addListener("menuClasses", "click", menuClasses.click, "WAF");
 	WAF.addListener("document", "onLoad", documentEvent.onLoad, "WAF");
 // @endregion
 };// @endlock
