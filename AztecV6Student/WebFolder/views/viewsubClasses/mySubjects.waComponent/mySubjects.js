@@ -13,7 +13,6 @@ function constructor (id) {
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
-	var richText7 = {};	// @richText
 	var icon6 = {};	// @icon
 	var icon2 = {};	// @icon
 	var icon1 = {};	// @icon
@@ -21,15 +20,6 @@ function constructor (id) {
 	// @endregion// @endlock
 
 	// eventHandlers// @lock
-
-	richText7.click = function richText7_click (event)// @startlock
-	{// @endlock
-		$$('breadText').setTextColor('red');
-		$$('breadText').setValue("ah come on... its a demo");
-		$$('alertText').setTextColor('white');
-		$$('alertText').setBackgroundColor("#FF3366")
-		$$('alertText').setValue('Warning');
-	};// @lock
 
 	icon6.click = function icon6_click (event)// @startlock
 	{// @endlock
@@ -39,7 +29,7 @@ function constructor (id) {
 
 	icon2.click = function icon2_click (event)// @startlock
 	{// @endlock
-		alert('provide help in right pane? in popup?');
+		alert('provide help in right pane');
 	};// @lock
 
 	icon1.click = function icon1_click (event)// @startlock
@@ -51,16 +41,13 @@ function constructor (id) {
 	{// @endlock
 		// load up a units/etc listing
 		$$('breadText').setTextColor('blue');
-		$$('breadText').setValue('Classes/ Basic Life Support (MED-201)/ Introduction to Algebra'); // set the class breadcrumb
-		$$('alertText').setTextColor('black');
-		$$('alertText').setBackgroundColor('white');
-		$$('alertText').setValue('Navigation');
-		
+		$$('breadText').setValue('Class: Math for the Medical Professional'); // set the class breadcrumb
+		$$('breadText1').setTextColor('blue');
+		$$('breadText1').setValue('Change this line to breadcrumbs');			// set the subject breadcrumb
 		$$('studentMain').loadComponent('/views/viewsubClasses/MyUnits.waComponent');
 	};// @lock
 
 	// @region eventManager// @startlock
-	WAF.addListener(this.id + "_richText7", "click", richText7.click, "WAF");
 	WAF.addListener(this.id + "_icon6", "click", icon6.click, "WAF");
 	WAF.addListener(this.id + "_icon2", "click", icon2.click, "WAF");
 	WAF.addListener(this.id + "_icon1", "click", icon1.click, "WAF");
